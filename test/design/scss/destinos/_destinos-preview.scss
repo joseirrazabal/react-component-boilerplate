@@ -1,0 +1,44 @@
+
+.portada-preview{
+	&.portada-destino{
+		@media (max-width:$screen-md){
+			height:330px;
+		}
+	}
+}
+
+.destinos-description{
+	font-family:$montserrat-light;
+	color:$white;
+	font-size:16px;
+	line-height:22px;
+	position:relative;
+	z-index:2;
+
+	.ver-mas{
+		display:block;
+		float:right;
+		font-family:$montserrat-bold;
+		text-decoration:underline;
+		margin-top:$double-margin;
+		text-transform:uppercase;
+
+		&:hover{
+			text-decoration:none;
+		}
+	}
+
+	@media (max-width:$screen-md){
+		text-align:center;
+
+		p{
+			display:none;
+		}
+
+		.ver-mas{
+			display:inline-block;
+			float:none;
+			margin:auto;
+		}
+	}
+}

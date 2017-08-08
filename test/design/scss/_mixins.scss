@@ -1,0 +1,364 @@
+
+/* Clearfix */
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Font face */
+@mixin font-face($font-name, $font-path, $font-file, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: '#{$font-name}';
+      src: url('#{$font-path}/#{$font-file}.eot');
+      src: url('#{$font-path}/#{$font-file}.woff') format('woff'),
+           url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
+           url('#{$font-path}/#{$font-file}.svg##{$font-name}') format('svg');
+    font: {
+          weight: $font-weight;
+          style: $font-style;
+      }
+  }
+}
+
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin nofrills {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    text-shadow: none;
+    border:none;
+}
+
+@mixin backface-visibility($value) {
+    -webkit-backface-visibility: $value;
+    -moz-backface-visibility: $value;
+    backface-visibility: $value;                    
+}
+
+@mixin transform-style($val) {
+  -webkit-transform-style: $val;
+  -moz-transform-style: $val;
+  -ms-transform-style: $val;
+  transform-style: $val;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+    @include backface-visibility(hidden);
+    @include transform-style(preserve-3d);
+}
+
+@mixin gradient{
+  background-image: -moz-linear-gradient(rgba(0,0,0,0.5) 10%, transparent 55%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, rgba(0,0,0,0.7)), color-stop(55%, transparent));
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.7) 10%, transparent 55%);
+  background-image: linear-gradient(rgba(0,0,0,0.7) 10%,rgba(0,0,0,0) 55%);
+}
+
+@mixin gradient2{
+  background: rgba(246,246,246,0.01);
+  background: -moz-linear-gradient(top, rgba(246,246,246,0.01) 0%, rgba(237,237,237,0.01) 0%, rgba(3,3,3,0.6) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,246,246,0.01)), color-stop(0%, rgba(237,237,237,0.01)), color-stop(100%, rgba(3,3,3,0.6)));
+  background: -webkit-linear-gradient(top, rgba(246,246,246,0.01) 0%, rgba(237,237,237,0.01) 0%, rgba(3,3,3,0.6) 100%);
+  background: -o-linear-gradient(top, rgba(246,246,246,0.01) 0%, rgba(237,237,237,0.01) 0%, rgba(3,3,3,0.6) 100%);
+  background: -ms-linear-gradient(top, rgba(246,246,246,0.01) 0%, rgba(237,237,237,0.01) 0%, rgba(3,3,3,0.6) 100%);
+  background: linear-gradient(to bottom, rgba(246,246,246,0.01) 0%, rgba(237,237,237,0.01) 0%, rgba(3,3,3,0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#030303', GradientType=0 );
+}
+
+@mixin vertical-align {
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin horizontal-align {
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+@mixin vertical-horizontal-align {
+    top: 50%;
+    left: 50%;
+    @include transform(translate3d(-50%, -50%, 0));
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+// Animation
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: #{$animation};
+    //-webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: #{$animation};
+    //-moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: #{$animation};
+    //-o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: #{$animation};
+    //animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+/* Grilla */
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+@function calc-percent($val-1, $val-2) {
+  @return ($val-1 / $val-2) * 100%;
+}
+
+@function calculation-col($val-1, $val-2){
+	@return $val-1 / $val-2;
+}
+
+@function calculation-width-total($val-1, $val-2, $val-3, $val-4){
+	@return $val-1 - $val-2 * ( $val-3  -  1 ) / $val-3 - ($val-4 * 2);
+}
+
+@function calculation-width-merge-total($val-1, $val-2, $val-3, $val-4, $val-5){
+	@return ($val-1 - $val-2 * ( $val-3  -  1 ) / $val-3) * $val-5 + $val-2 * ($val-5 - 1) - ($val-4 * 2);
+}
+
+@function calc-number($val-1, $val-2) {
+  @return ($val-1 * $val-2) / 100;
+}
+
+
+@mixin cols ( $number-col, $margin-col:0px, $padding-col:0px ){
+
+		//percentage
+		$margin-col-percent:calc-percent($margin-col, $width-container);
+		$padding-col-percent:calc-percent($padding-col, $width-container);
+
+		//strips
+		$margin-col-strip:strip-units($margin-col-percent);
+		$padding-col-strip:strip-units($padding-col-percent);
+		$width-col-strip:calculation-col(100, $number-col);
+
+		//calculation
+		$width-total-strip:calculation-width-total($width-col-strip, $margin-col-strip, $number-col, $padding-col-strip);
+
+    $width-number:calc-number($width-total-strip, $width-container);
+    $margin-number:calc-number($margin-col-strip, $width-container);
+    $padding-number:calc-number($padding-col-strip, $width-container);
+
+    
+		width:$width-total-strip * 1%;
+		margin-right: $margin-col-strip * 1%;
+		padding-left: $padding-col-strip * 1%;
+		padding-right: $padding-col-strip * 1%;
+    /*
+    width:$width-number;
+    margin-right:$margin-number;
+    padding-left:$padding-number;
+    padding-right:$padding-number;
+    */
+		float:left;
+
+
+    &:nth-child( #{$number-col}n + #{$number-col}){
+      margin-right:0;
+    }
+    
+    &:last-child{
+			margin-right:0;
+		}
+
+}
+
+@mixin colsMerge ($number-col, $margin-col, $number-merge, $padding-col:0px){
+
+		//percentage
+		$margin-col-percent:calc-percent($margin-col, $width-container);
+		$padding-col-percent:calc-percent($padding-col, $width-container);
+
+		//strips
+		$margin-col-strip:strip-units($margin-col-percent);
+		$padding-col-strip:strip-units($padding-col-percent);
+		$width-col-strip:calculation-col(100, $number-col);
+
+		//calculation
+		$width-total-strip:calculation-width-merge-total($width-col-strip, $margin-col-strip, $number-col, $padding-col-strip, $number-merge);
+
+    $width-number:calc-number($width-total-strip, $width-container);
+    $margin-number:calc-number($margin-col-strip, $width-container);
+    $padding-number:calc-number($padding-col-strip, $width-container);
+
+    
+		width:$width-total-strip * 1%;
+		margin-right: $margin-col-strip * 1%;
+		padding-left: $padding-col-strip * 1%;
+		padding-right: $padding-col-strip * 1%;
+    /*
+    width:$width-number;
+    margin-right:$margin-number;
+    padding-left:$padding-number;
+    padding-right:$padding-number;
+    */
+		float:left ;
+		
+		&:last-child{
+			margin-right: 0;
+		}
+	
+}
+
+@mixin arrowSlide($arrowLeft, $arrowRight, $arrowColor:false, $arrowTop:false ){
+
+    .owl-controls{
+        margin:0;
+        width:100%;
+        height:100%;
+        z-index:0;
+
+        .owl-pagination{
+            position:absolute;
+            margin:0;
+            width:100%;
+            bottom:0;
+            top:auto;
+        }
+
+        .owl-buttons { 
+            width:100%;
+            
+            div{
+                //background:none!important;
+                padding:0;
+                font-size:60px;
+                color:#{$arrowColor};
+                position:absolute;
+                top:#{$arrowTop};
+                margin:0;
+                text-shadow:0 0 2px rgba(0,0,0, 8/10);
+                border-radius:0;
+                opacity:1;
+                @include vertical-align;
+
+
+                &.owl-prev{
+                    left:#{$arrowLeft};
+                  z-index: 10;
+                }
+                &.owl-next{
+                    right:#{$arrowRight};
+                }
+            }
+        }
+
+    }
+}

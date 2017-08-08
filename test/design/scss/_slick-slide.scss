@@ -1,0 +1,58 @@
+/* ESTILOS GENERALES SLIDER VISTA DE PAQUETES / HOTELES */
+
+.hoteles-view-intro-slide{
+
+  .slide{
+    width:$result-item-image-width;
+    float: left;
+    position: relative;
+  }
+
+  .slick-initialized{
+    .slick-prev{
+      left: 10px!important;
+      z-index: 2;
+
+      &:before{
+        font-size: 30px;
+      }
+
+    }
+    .slick-next{
+      right: 20px!important;
+      z-index: 2;
+
+      &:before{
+        font-size: 30px;
+      }
+
+    }
+
+  }
+
+  .slick-slide{
+    opacity: 0.3;
+    img{
+      width: 100%;
+    }
+    &:after{
+
+    }
+
+  }
+
+  .slick-slide .slick-active{
+    opacity: 1!important;
+    &:after{
+
+    }
+  }
+  .slick-center{
+    opacity: 1!important;
+    padding:0 3px!important;
+    img{
+      width: 100%;
+    }
+  }
+
+}

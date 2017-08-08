@@ -1,0 +1,112 @@
+
+$max-col:12;
+$list-queries:'lg' $screen-lg, 'md' $screen-md, 'sm' $screen-sm, 'xs' $screen-xs, 'xxs' $screen-xxs;
+
+@for $i from 1 through $max-col{
+
+	@if $i == 1 {
+
+	    .mod-#{$i}col-xl{
+			@include cols($i,0,0);
+			margin-right:0;
+
+			&.padding-col{
+				@include cols($i , $margin-col, $padding-col);
+			}
+
+		}
+
+	} @else {
+
+		.mod-#{$i}col-xl{
+			@include cols($i , $margin-col);
+
+			&.padding-col{
+				@include cols($i , $margin-col, $padding-col);
+
+				&.no-margin{
+					@include cols($i , 0, $padding-col);
+				}
+			}
+
+			&.no-margin{
+				@include cols($i , 0, $padding-col);
+			}
+
+			@if $i >= 3{
+
+				@for $e from 2 through $i - 1{
+
+					&.merge-#{$e}-xl{
+						@include colsMerge($i , $margin-col, $e);
+
+						&.padding-col{
+
+						}
+
+					}
+
+				}
+					
+			}	
+
+		}
+			
+	}
+
+}
+
+@each $z in $list-queries{
+
+	@media (max-width:nth($z, 2)){
+
+		@for $i from 1 through $max-col{
+
+			@if $i == 1 {
+
+			    .mod-#{$i}col-#{nth($z, 1)}{
+					@include cols($i,0,0);
+					margin-right:0;
+					margin-bottom:$double-margin;
+
+					&.padding-col{
+						
+					}
+
+				}
+
+			} @else {
+
+				.mod-#{$i}col-#{nth($z, 1)}{
+					@include cols($i , $margin-col);
+
+					&.padding-col{
+
+					}
+
+					@if $i >= 3{
+
+						@for $e from 2 through $i - 1{
+
+							&.merge-#{$e}-#{nth($z, 1)}{
+								@include colsMerge($i , $margin-col, $e);
+
+								&.padding-col{
+
+								}
+
+							}
+
+						}
+							
+					}	
+
+				}
+					
+			}
+
+		}
+	}
+	
+}
+

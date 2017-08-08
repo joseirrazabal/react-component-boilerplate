@@ -1,0 +1,15 @@
+.search-content{
+	width:100%;
+	float:left;
+	background-color:$yellow;
+	padding:$double-margin * 1.5 0;
+	margin-top:-1px;
+
+	.form-input{
+		&.input-text{
+			border:none;
+			width:calc(100% - #{$double-margin});
+			height: 40px;
+		}
+	}
+}

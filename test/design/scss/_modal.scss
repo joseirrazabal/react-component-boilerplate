@@ -1,0 +1,48 @@
+
+.modal{
+  max-height: calc(100% - 100px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2000;
+  //padding: 5%;
+  //overflow: hidden;
+
+  .inner{
+    width: auto;
+    height: 100%;
+    margin: auto;
+    padding: 15px;
+    max-width: 630px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-overlay{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: block;
+  z-index: 1000;
+  background:rgba(0,0,0,0.7);
+}
+
+.modal-close {
+  position: relative;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 2000;
+  display: inline-block;
+  float: right;
+  background-image: url('../images/fancybox/fancybox_sprite.png');
+}

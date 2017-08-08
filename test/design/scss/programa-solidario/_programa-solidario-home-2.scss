@@ -1,0 +1,138 @@
+$icon-solidario-content:125px;
+$icon-solidario-size:75px;
+
+.programa-solidario-home-2{
+	width:100%;
+	background:$blue-dark;
+	padding:$double-margin 0;
+	float:left;
+
+	.programa-solidario-cell{
+		position:relative;
+		height:60px;
+
+		.programa-solidario-icon{
+			width:$icon-solidario-content;
+			height:$icon-solidario-content;
+			border-radius:50%;
+			background:$white;
+			border:6px solid $teal;
+			@include vertical-align();
+			position:absolute;
+			left:-$double-margin - $main-margin / 2;
+
+
+			.icon-item{
+				width:$icon-solidario-size;
+				height:$icon-solidario-size;
+				float:none;
+				display:block;
+				margin:auto;
+
+				&:before{
+					width:$icon-solidario-size;
+					height:$icon-solidario-size;
+				}
+			}
+		}
+
+		.programa-solidario-info{
+			text-transform:uppercase;
+			color:$white;
+			font-size:14px;
+			font-family:$montserrat-light;
+			float:left;
+			left:$icon-solidario-content + $main-margin;
+			position:relative;
+			@include vertical-align();
+			width:160px;
+
+			.small{
+				font-size:13px;
+			}
+
+			b{
+				font-size:16px;
+				display:block;
+				font-family:$montserrat-extrabold;
+			}
+		}
+	}
+
+	@media (max-width:$screen-lg){
+
+		$icon-solidario-content:100px;
+		$icon-solidario-size:65px;
+		background:transparent;
+
+		.programa-solidario-cell{
+			height:auto;
+
+			.programa-solidario-icon{
+				left: 0;
+				position: relative;
+				width:$icon-solidario-content;
+				height:$icon-solidario-content;
+				margin: auto;
+				-webkit-transform: translateY(-25%);
+				transform: translateY(-25%);
+
+				.icon-item{
+					width:$icon-solidario-size;
+					height:$icon-solidario-size;
+
+					&:before{
+						width:$icon-solidario-size;
+						height:$icon-solidario-size;
+					}
+				}
+			}
+
+			.programa-solidario-info{
+				text-align: center;
+				width: 100%;
+				left: 0;
+				float: left;
+				-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+
+				b{
+					font-size:14px;
+				}
+			}
+		}
+
+	}
+
+	@media (max-width:$screen-sm){
+		$icon-solidario-content:125px;
+		$icon-solidario-size:75px;
+
+		.double-air{
+			margin-bottom: 15px!important;
+		}
+
+		.programa-solidario-cell{
+			height:auto;
+
+			.programa-solidario-icon{
+				left: 0;
+				top: 20px;
+				position: relative;
+				width:$icon-solidario-content;
+				height:$icon-solidario-content;
+				margin: auto;
+				-webkit-transform: translateY(-25%);
+				transform: translateY(-25%);
+			}
+
+			.programa-solidario-info{
+				text-align: center;
+				width: 100%;
+				left: 0;
+				float: left;
+			}
+		}
+
+	}
+}

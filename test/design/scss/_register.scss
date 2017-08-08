@@ -1,0 +1,26 @@
+
+.container-register{
+	max-width:600px;
+
+
+	.label-input{
+		text-align:left;
+	}
+
+	.register-succes{
+		text-align:center;
+		color:$blue-dark;
+		font-size:18px;
+		line-height:24px;
+	}
+
+	.register-message{
+		text-align:center;
+		color:$gray-dark;
+		font-size:16px;
+		line-height:24px;
+		margin-bottom:$double-margin;
+		font-family:$montserrat-light;
+	}
+
+}

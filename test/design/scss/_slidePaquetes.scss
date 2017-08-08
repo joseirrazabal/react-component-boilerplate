@@ -1,0 +1,11 @@
+
+.slidePaquetes{
+	@include arrowSlide(-#{$icon-arrow-width}, '0' , #{$white});
+
+	@media (max-width:$screen-lg){
+
+		@include arrowSlide('0', #{$icon-arrow-width} , #{$gray});
+
+	}
+
+}

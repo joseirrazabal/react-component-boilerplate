@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="49.332px"
+	 viewBox="0 0 50 49.332" enable-background="new 0 0 50 49.332" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  height="27.667" width="36.891" x="690.99" y="370.677" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#FFFFFF" d="M39.834,14.369H29.193v-1.773c0-0.993-0.781-1.774-1.774-1.774h-4.966c-0.994,0-1.774,0.781-1.774,1.774
+		v1.773H10.038c-1.987,0-3.548,1.561-3.548,3.547v17.026c0,1.986,1.561,3.547,3.548,3.547h29.796c1.986,0,3.547-1.561,3.547-3.547
+		V17.916C43.381,15.93,41.82,14.369,39.834,14.369z M22.098,12.596c0-0.213,0.142-0.354,0.354-0.354h4.966
+		c0.212,0,0.355,0.142,0.355,0.354v1.773h-5.676L22.098,12.596L22.098,12.596z M10.038,37.071c-1.206,0-2.128-0.922-2.128-2.129
+		V17.916c0-1.206,0.922-2.128,2.128-2.128h4.256v7.804h-1.418v4.966h1.419v8.514H10.038z M14.294,27.139V25.01h1.419v2.128H14.294z
+		 M15.713,37.071v-8.514h1.418v-4.966h-1.418v-7.804h4.966h1.419h5.676h1.419h4.965v7.804H32.74v4.966h1.418v8.514H15.713z
+		 M34.158,27.139V25.01h1.42v2.128H34.158z M41.962,34.942c0,1.207-0.923,2.129-2.128,2.129h-4.256v-8.514h1.418v-4.966h-1.418
+		v-7.804h4.256c1.205,0,2.128,0.922,2.128,2.128V34.942z"/>
+	<polygon fill="#FFFFFF" points="27.064,20.488 22.808,20.488 22.808,23.725 19.571,23.725 19.571,27.981 22.808,27.981 
+		22.808,31.219 27.064,31.219 27.064,27.981 30.302,27.981 30.302,23.725 27.064,23.725 	"/>
+</g>
+</svg>

@@ -1,0 +1,124 @@
+
+.destinos-search{
+	position:relative;
+	z-index:2;
+
+
+	.title-destino{
+		font-family:$montserrat-extrabold;
+		font-size:34px;
+		text-transform:uppercase;
+		color:$white;
+		margin-bottom:$double-margin;
+	}
+
+	.label-input{
+		font-family:$montserrat-extrabold;
+		font-size:20px;
+		color:$white;
+		text-transform:uppercase;
+		line-height:24px;
+	}
+
+	.form-select{
+		background:none;
+		border-bottom:3px solid $white;
+		height:50px;
+		margin-bottom:$double-margin * 2;
+
+		&:after {
+			color:$white;
+		}
+
+		select{
+			height:50px;
+			color:$white;
+			font-size:30px;
+			text-transform:uppercase;
+			font-family:$montserrat-light;
+			padding-left:0;
+			text-indent:0;
+
+			option{
+				color:$gray-dark;
+				font-size:16px;
+				text-transform:none;
+				font-family:$montserrat-light;
+			}
+		}
+	}
+
+	.mod-1col-xl{
+		&:last-child{
+			.form-select{
+				margin-bottom:0;
+			}
+		}
+	}
+
+	.btn{
+		float:right;
+	}
+
+	@media (max-width:$screen-lg){
+		.title-destino{
+			font-size:30px;
+		}
+
+		.label-input{
+			font-size:20px;
+		}
+
+		.form-select{
+
+			select{
+				font-size:24px;
+
+				option{
+					font-size:14px;
+				}
+			}
+
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+		.title-destino{
+			font-size:24px;
+		}
+
+		.label-input{
+			font-size:16px;
+		}
+
+		.form-select{
+			margin-bottom:$double-margin;
+
+			select{
+				font-size:20px;
+
+				option{
+					font-size:12px;
+				}
+			}
+
+		}
+
+		.btn{
+			float:none;
+		}
+
+	}
+
+	@media (max-width:$screen-sm){
+
+		.row{
+			&.margin-air{
+				margin-bottom:0!important;
+			}
+		}
+
+	}
+
+}

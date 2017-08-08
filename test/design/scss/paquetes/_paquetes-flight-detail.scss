@@ -1,0 +1,303 @@
+$flight-row-height:70px;
+
+.flight-view{
+	width:100%;
+	float:left;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+
+	.flight-row{
+		width:100%;
+		float:left;
+		height:$flight-row-height;
+		background:lighten($gray-light, 3%);
+		overflow:hidden;
+
+		.icon-item{
+			width:$flight-row-height;
+			height:$flight-row-height;
+			background-color:lighten($gray, 3%);
+			float:left;
+
+			&.icon-flight{
+
+				&:before{
+					width:50%;
+					height:50%;
+					@include vertical-horizontal-align();
+				}
+			}
+		}
+
+		.flight-info{
+			width:calc(100% - #{$flight-row-height} - #{$main-margin} * 3);
+			float:left;
+			margin-left:$double-margin;
+			//padding:$main-margin $main-margin $main-margin 0;
+			color:$blue-dark;
+			font-family:$montserrat-light;
+			font-size:14px;
+			line-height:15px;
+			position:relative;
+
+			.flight-date{
+				font-family:$montserrat-regular;
+				font-size:16px;
+				margin-bottom:$main-margin;
+
+				b{
+					font-family:$montserrat-extrabold;
+					text-transform:uppercase;
+				}
+			}
+
+			.flight-text{
+				margin-bottom:$main-margin / 2;
+				padding-left:$main-margin * 1.5;
+				position:relative;
+
+				&:before{
+					content:'●';
+					margin-right:$main-margin / 2;
+					position:absolute;
+					left:0;
+				}
+			}
+
+			.flight-info-scales{
+				position:absolute;
+				color:$blue-dark;
+				background:$yellow;
+				padding:$main-margin / 3 $main-margin / 2;
+				top:0;
+				left:-$double-margin;
+				text-transform:uppercase;
+				font-size:11px;
+			}
+
+			@media (max-width:$screen-md){
+				.flight-info-scales{
+					position:relative;
+					width:calc(100% - #{$main-margin} + (#{$double-margin} * 2));
+					top:-$main-margin;
+					text-align:center;
+				}
+			}
+
+		}
+
+		&.flight-return{
+			background:$gray-light;
+
+			.icon-item{
+				background:$gray;
+			}
+		}
+
+		&.flight-outbound{
+			.icon-flight{
+				background:$teal!important;
+			}
+		}
+
+		&.flight-return{
+			.icon-flight{
+				background: $blue-dark!important;
+			}
+		}
+	}
+
+	@media(max-width:$screen-md){
+
+		.flight-row{
+			height:auto;
+
+			.icon-item{
+				width:100%;
+
+				&.icon-flight{
+
+					&:before{
+						width:50px;
+						height:50px;
+					}
+				}
+			}
+		}	
+	}
+
+
+	// .row-new, .icon-new, .flight-info-new{
+	// 	height: 100px!important;
+	// 	@media (max-width:$screen-sm){
+	// 		height: auto!important;
+	// 	}
+	// }
+
+	.flight-info-new{
+		@media (max-width:$screen-md){
+			width: calc(100% / 1 - 40px)!important;
+		}
+	}
+
+	.list_of_scales{
+		display: block;
+		width: 100%;
+
+		li{
+			display: inline-block;
+			position:relative;
+			
+			&:after{
+				content:'';
+				width:20px;
+				height:18px;
+				position:absolute;
+				background-image:url(../images/select.png);
+				background-size:100% auto;
+				left:0;
+				top: 12px;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				//@include vertical-align();
+				z-index:2;
+			}
+			
+
+			.center-result-title{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.flight-airport{
+					text-align: left;
+					text-transform: uppercase;
+					clear: both;
+					padding: 5px 0;
+					text-align:center;
+
+					.flight-airport-hour{
+						display:block;
+						font-size:12px;
+						font-family:$montserrat-bold;
+					}
+					
+					.flight-airport-date{
+						display:block;
+						font-size:10px;
+						//margin-bottom:$main-margin / 2;
+					}
+
+					.flight-airport-name{
+						display:block;
+						font-size:11px;
+						.flight-airport-acronym{
+							font-family:$montserrat-bold;
+						}
+					}
+
+					
+
+				}
+
+			}
+
+			.line-circle{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-image:url(../images/line.png);
+				background-position: center;
+
+				.circle-center{
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background: gray;
+				}
+
+			}
+
+		}
+		li:last-child{
+
+			&:before{
+				content:'';
+				width:20px;
+				height:18px;
+				position:absolute;
+				background-image:url(../images/select.png);
+				background-size:100% auto;
+				left:0;				
+				top: 41px;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				z-index:2;
+			}
+			&:after{
+				content:none
+			}
+		}
+		li:first-child{
+
+			&:after{
+				content:none
+			}
+		}
+
+		@media (max-width:$screen-sm){
+			li{
+
+				&:after{
+					content:none
+				}
+			}
+		}
+	}
+
+	.info-date-scale{
+		width: 100%;
+		padding: 10px 0;
+
+		li:first-child{
+			float: left;
+			font-size: 12px;
+		}
+
+		li:last-child{
+			float: right;
+			font-size: 14px;
+			color: $blue-dark;
+		}
+
+	}
+
+	.scales-0{
+		li{
+			width: calc(100% / 2 - 3px);
+		}
+	}
+	.scales-1{
+		li{
+			width: calc(100% / 3 - 3px);
+		}
+	}
+	.scales-2{
+		li{
+			width: calc(100% / 3 - 3px);
+		}
+	}
+	.scales-0, .scales-1, .scales-2{
+		li{
+			@media (max-width:$screen-sm){
+				width: calc(100% / 1);
+				background-image: none;
+			}
+		}
+	}
+
+
+
+}
+
+
+

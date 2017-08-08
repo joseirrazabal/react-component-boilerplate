@@ -1,0 +1,28 @@
+
+.fancybox-skin{
+	background:$white;
+	border-radius:0;
+}
+
+.ligthbox-content{
+	max-width:600px;
+	width:96%;
+	
+	.title{
+		text-align:center;
+		text-transform:uppercase;
+		font-size:14px;
+		color:$blue-dark;
+		margin-bottom:$double-margin;
+	}
+
+	.description{
+		font-size:12px;
+		font-family:$montserrat-light;
+
+		p{
+			margin-bottom:$main-margin;
+		}
+	}
+
+}

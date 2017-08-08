@@ -1,0 +1,43 @@
+
+.equipo-ventas-item{
+	width:100%;
+	float:left;
+	text-align:center;
+	margin-bottom:$double-margin * 2;
+
+	.equipo-ventas-image{
+		width:250px;
+		height:250px;
+		border-radius:50%;
+		overflow:hidden;
+		border-style:solid;
+		border-width:8px;
+		border-color:$gray;
+		margin:0 auto $double-margin;
+
+		img{
+			width:100%;
+			display:block;
+		}
+	}
+
+	.equipo-ventas-name{
+		text-transform:uppercase;
+		font-family:$montserrat-bold;
+		color:$blue-dark;
+		font-size:18px;
+	}
+
+}
+
+.equipo-ventas-widget{
+
+	.mod-3col-xl{
+		&:nth-child(even){
+			.equipo-ventas-image{
+				border-color:$yellow;
+			}
+		}
+	}
+
+}

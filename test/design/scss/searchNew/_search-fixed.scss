@@ -1,0 +1,138 @@
+.search-fixed{
+	position:fixed;
+	width:100%;
+	z-index:19;
+	top:0px;
+	max-height:500px;
+	background:$yellow;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.7);
+
+	transition:max-height .8s ease-in-out, border .3s linear;
+	//overflow-y: hidden!important;
+
+	.close-search-fixed{
+		position:absolute;
+		right:$main-margin;
+		top:$main-margin;
+		cursor:pointer;
+		.icon-close:before {
+			background-image: url(../images/icons/icon-close-white.svg);
+			content: '';
+		}
+	}
+	.iso-logo{
+		float: left;
+		width: 34px;
+		height: 34px;
+		//border: 1px solid;
+		//box-sizing: border-box;
+		margin: 5px;
+		background-image: url(../images/aleani-iso-white.svg);
+		background-size: 35px;
+		background-repeat: no-repeat;
+	}
+	.search-tabs{
+		//height:46px;
+		height: 45px;
+		
+		.search-tabs-nav{
+			text-align:center;
+			background:none;
+
+			.tabs-wrapper-trigger{
+				display:inline-block;
+				border-top:none;
+				padding-left:$main-margin;
+				padding-right:$main-margin;
+				color:$white;
+				height:46px;
+				line-height:40px;
+
+				.icon-tab{
+					top:8px;
+
+					&.icon-plane{
+						background-image:url(../images/icons/icon-plane.svg);
+					}
+
+					&.icon-bell{
+						background-image:url(../images/icons/icon-bell.svg);
+					}
+
+					&.icon-baggage{
+						background-image:url(../images/icons/icon-baggage.svg);
+					}
+
+				}
+
+				&:hover,
+				&.active{
+					cursor:auto;
+					//background:$yellow;
+					background: rgba(237,190,0, 1);
+					color:$white;
+
+					.icon-tab{
+
+						&.icon-plane{
+							background-image:url(../images/icons/icon-plane.svg);
+						}
+
+						&.icon-bell{
+							background-image:url(../images/icons/icon-bell.svg);
+						}
+
+						&.icon-baggage{
+							background-image:url(../images/icons/icon-baggage.svg);
+						}
+
+					}
+				}
+
+				&:hover{
+					cursor:pointer;
+				}
+
+			}
+
+		}
+
+	}
+
+	.search-content{
+		padding:0;
+		width: 100%!important;
+		max-width: 100%;
+		background: rgba(237,190,0, 0.7);
+
+		.content-tabs-item{
+			padding:$double-margin 0;
+			float: left;
+			width: 100%;
+		}
+
+	}
+
+	@media (max-width:$screen-lg){
+		display:none;
+		
+		/*
+		.search-tabs{
+			
+			.search-tabs-nav{
+
+				.tabs-wrapper-trigger{
+					height:64px;
+					float:left;
+					padding-left:0;
+					padding-right:0;
+				}
+
+			}
+
+		}
+		*/
+
+	}
+
+}

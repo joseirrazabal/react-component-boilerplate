@@ -1,0 +1,146 @@
+$btn-outline-size:150px;
+
+
+.hoteles-view-header{
+	position:relative;
+	width:100%;
+	z-index:101;
+	//padding:$double-margin 0;
+	padding:$main-margin 0;
+	top:0;
+
+	&.search-fixed{
+		border-bottom:none;
+	}
+
+	.hoteles-view-header-name{
+		width:100%;
+		float:left;
+		overflow:hidden;
+		color:$blue-dark;
+		font-size:13px;
+		line-height:20px;
+		height:20px;
+		font-family:$montserrat-bold;
+		text-transform:uppercase;
+		margin-bottom:$main-margin / 2;
+	}
+
+	.hoteles-view-header-subname{
+		width:100%;
+		float:left;
+		overflow:hidden;
+		color:$blue-dark;
+		font-size:11px;
+		line-height:11px;
+		height:11px;
+	}
+
+	.hoteles-view-header-star{
+		width:100px;
+		float:left;
+
+		img{
+			width:100%;
+			display:block;
+		}
+	}
+
+	.hoteles-view-header-info{
+		width:calc((100% - #{$btn-outline-size} ) / 2 - #{$double-margin} - 1px);
+		//width:auto;
+		padding:0 $main-margin;
+		float:left;
+		border-left:1px solid $blue-dark;
+		height:40px;
+		position:relative;
+
+		.hoteles-view-header-text{
+			width:100%;
+			float:left;
+			position:relative;
+			font-size:11px;
+			color:$blue-dark;
+			line-height:20px;
+
+			.icon-item{
+				width: 20px;
+    			height: 18px;
+				float:left;
+				margin-right:$main-margin;
+
+				&:before{
+					width: 18px;
+    				height: 18px;
+				}
+			}
+
+		}
+
+		&:last-child{
+			border-left:none;
+			width:$btn-outline-size;
+			padding:0;
+		}
+
+		.btn-outline{
+			width:calc(100% - 6px);
+			border:1px solid $blue-dark;
+			padding:$main-margin 0;
+			text-transform:uppercase;
+			font-family:$montserrat-bold;
+			font-size: 13px;
+			color:$blue-dark;
+			text-align:center;
+			display:block;
+			position:absolute;
+			cursor:pointer;
+			transition: 0.5s;
+			@include vertical-horizontal-align();
+			@include transition(200ms, ease-in);
+
+			&:hover{
+				transition: 0.5s;
+				background:$blue-dark;
+				color:$white;
+				text-decoration:none;
+			}
+		}
+
+		@media (max-width:$screen-md){
+			width:100%;
+			padding:$main-margin 0 0 0;
+			margin:0 0 $main-margin 0;
+			border-left:none;
+			border-top:1px solid $blue-dark;
+
+			&:last-child{
+				border-top:none;
+				width:100%;
+			}
+
+		}
+
+	}
+
+	.content-tabs-item{
+		border-top:1px solid $blue-dark;
+		margin-top:$double-margin;
+	}
+	
+	@media (max-width:$screen-lg){
+		display:block;
+		z-index:99;
+	}
+
+}
+
+@media (max-width:$screen-md){
+	.hotel-view-header-row{
+		.mod-1col-lg{
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+}

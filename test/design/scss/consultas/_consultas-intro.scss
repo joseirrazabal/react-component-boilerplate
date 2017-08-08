@@ -1,0 +1,170 @@
+$consultas-icon-size:200px;
+
+.consultas-main{
+	width:100%;
+	float:left;
+	background:$blue-dark;
+	padding:$main-margin * 3.5 0;
+	position:relative;
+
+	.consultas-cell{
+		width:calc(50% - #{$double-margin} * 2 );
+		float:left;
+		padding:0 $double-margin;
+
+		.text{
+			color:$white;
+			font-family:$montserrat-light;
+			font-size:16px;
+			line-height:20px;
+
+			b{
+				display:block;
+				font-family:$montserrat-bold;
+				margin-top:$main-margin;
+				
+				&.number{
+					color:$yellow;
+					font-size:24px;
+					margin-top:$main-margin;
+				}
+			}
+
+			&.cell-fix{
+				width:calc(100% - #{$consultas-icon-size} - #{$double-margin});
+				float:right;
+				margin-left:$double-margin;
+			}
+		}
+
+		.consultas-icon{
+			width:$consultas-icon-size;
+			height: $consultas-icon-size;
+			position:absolute;
+			@include vertical-align();
+			background:$teal-light;
+			text-align:center;
+			border-radius:50%;
+			overflow:hidden;
+			margin-left:0;
+
+			.icon-phone{
+				width:130px;
+				height:130px;
+				@include vertical-horizontal-align;
+				position:absolute;
+
+				&:before{
+					width:130px;
+					height:130px;
+					position:relative;
+					left:0;
+					background-image:url(../images/icons/icon-phone-blue.svg);
+				}
+			}
+		}
+	}
+
+
+	&:before{
+		content:'';
+		border-right:2px solid $white;
+		width:50%;
+		height:calc(100% - #{$main-margin} * 7);
+		position:absolute;
+		left:0;
+	}
+
+	@media (max-width:$screen-lg){
+		$consultas-icon-size:150px;
+
+
+		.consultas-cell{
+
+			.text{
+				font-size:15px;
+				&.cell-fix{
+					width:calc(100% - #{$consultas-icon-size} - #{$main-margin});
+				}
+			}
+
+			.consultas-icon{
+				width:$consultas-icon-size;
+				height: $consultas-icon-size;
+				margin-left:-$double-margin;
+
+				.icon-phone{
+					width:80px;
+					height:80px;
+
+					&:before{
+						width:80px;
+						height:80px;
+					}
+				}
+			}
+
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+		$consultas-icon-size:150px;
+
+		.consultas-cell{
+			width:calc(100% - #{$double-margin} * 2);
+
+			.text{
+				width:calc(100% - #{$consultas-icon-size} - #{$main-margin});
+				float:right;
+				border-bottom:2px solid $white;
+				padding-bottom:$double-margin;
+				margin-bottom:$double-margin;
+			}
+
+			&:last-child{
+				.text{
+					margin-bottom:0;
+					border-bottom:none;
+					padding-bottom:0;
+				}
+			}
+
+		}
+
+		&:before{
+			border:none;
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+		$consultas-icon-size:150px;
+
+		.consultas-cell{
+
+			.text{
+				width:calc(100% - #{$double-margin});
+				text-align:center;
+
+				&.cell-fix{
+					width:calc(100% - #{$double-margin});
+				}
+			}
+
+			.consultas-icon{
+				width:$consultas-icon-size;
+				height: $consultas-icon-size;
+				position:relative;
+				margin:0 auto $double-margin;
+				display:block;
+				top:auto;
+				transform:none;
+
+			}
+
+		}
+
+	}
+
+}

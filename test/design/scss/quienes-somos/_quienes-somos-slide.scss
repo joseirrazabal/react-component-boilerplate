@@ -1,0 +1,66 @@
+
+.slide-quienes-somos{
+
+	@include arrowSlide('0', #{$icon-arrow-width} ,'');
+	margin-bottom: 0!important;
+
+	.item{
+		width:100%;
+		float:left;
+	}
+
+	.quienes-somos-quote{
+		max-width:650px;
+		width:96%;
+		height:250px;
+		position:relative;
+		text-align:center;
+		margin:auto;
+
+		.quote-wrapper{
+			width:100%;
+			position:absolute;
+			@include vertical-align();
+			color:$white;
+
+			.quote{
+				font-family:'Georgia';
+				font-style:italic;
+				font-size:30px;
+				margin-bottom:$double-margin;
+			}
+
+			.author{
+				font-family:$montserrat-light;
+				font-size:14px;
+
+				&:after{
+					content:'-';
+					margin-left:$main-margin;
+				}
+
+				&:before{
+					content:'-';
+					margin-right:$main-margin;
+				}
+
+			}
+
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+
+		.quienes-somos-quote{
+
+			.quote-wrapper{
+
+				.quote{
+					font-size:24px;
+				}
+			}
+		}
+	}
+
+}

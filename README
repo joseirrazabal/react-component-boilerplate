@@ -1,0 +1,5 @@
+Agregar nuestros componentes en src/component/
+
+Modificar src/index.js (importar componentes)
+
+Modificar test/App.jsx para ver la demo

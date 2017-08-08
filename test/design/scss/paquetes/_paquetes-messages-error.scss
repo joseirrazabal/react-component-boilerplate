@@ -1,0 +1,18 @@
+
+.paquetes-message-error{
+	
+	max-width:600px;
+	width:100%;
+	position:absolute;
+	z-index:3;
+	@include vertical-horizontal-align();
+
+	.main-title{
+		color:$white;
+	}
+	.main-description{
+		color:$white;
+		text-transform:none;
+		line-height:22px;
+	}
+}

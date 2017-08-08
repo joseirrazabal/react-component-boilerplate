@@ -1,0 +1,39 @@
+
+.portada-preview{
+
+	&:before{
+		background:rgba(0,0,0,4/10);
+	}
+
+	&.portada-destino{
+		height:500px;
+		overflow:hidden;
+	}
+
+	@media(max-width:$screen-lg){
+		//background-color:$yellow;
+		background-size:auto 500px;
+		background-position:top;
+
+		&.portada-destino{
+			height:auto;
+			overflow:hidden;
+		}
+
+	}
+
+	@media(max-width:$screen-md){
+		background-color:$yellow;
+		background-size:auto 700px;
+		background-position:top;
+
+		&:before{
+			//height:700px;
+			height:265px;
+		}
+
+	}
+
+
+}
+

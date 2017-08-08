@@ -1,0 +1,157 @@
+$cucard-size:60px;
+$oferta-extra-number-size:50px;
+$oferta-extra-hour-size:80px;
+$oferta-extra-day-size:60px;
+
+.ofertas-item-extras{
+
+	.cucarda-last-minutes{
+		width:$cucard-size;
+		height:$cucard-size;
+		position:absolute;
+		background-image:url(../images/aleani-cucarda-lastminute.svg);
+		background-size:100% auto;
+		background-repeat:none;
+		left:-$cucard-size / 3.5;
+		top:-$cucard-size / 4;
+		z-index:4;
+		-webkit-filter:drop-shadow( 0 0 5px rgba(0,0,0,7/10) );
+        filter: drop-shadow( 0 0 5px rgba(0,0,0,7/10) ); 
+	}
+
+	.ofertas-extras{
+		width:calc(100% - #{$double-margin});
+		padding:$main-margin;
+		background:$gray-light;
+		float:left;
+		color:$blue-dark;
+
+		.text{
+			font-family:$montserrat-regular;
+			font-size:10px;
+			text-transform:uppercase;
+			@include vertical-align();
+			position:absolute;
+		}
+
+		.number-paquetes{
+			width:calc(50% - #{$main-margin} - 2px);
+			float:left;
+			border-right:2px solid $blue-dark;
+			padding:0 $main-margin 0 0;
+			position:relative;
+
+			.number{
+				width:$oferta-extra-number-size;
+				height:$oferta-extra-number-size;
+				border-radius:50%;
+				text-align:center;
+				border:2px solid $blue-dark;
+				float:left;
+				font-family:$montserrat-bold;
+				font-size:20px;
+				line-height:$oferta-extra-number-size;
+				margin-right:$main-margin / 2;
+			}
+
+			.text{
+				width:calc(100% - #{$double-margin} - #{$oferta-extra-number-size});
+				right:$main-margin;
+			}
+		}
+
+		.vencimiento-paquetes{
+			width:calc(50% -  #{$main-margin});
+			float:left;
+			padding:0 0 0 $main-margin;
+			position:relative;
+
+			.text{
+				width:calc(100% - (#{$main-margin} * 4.5) - #{$oferta-extra-hour-size});
+				left:$main-margin;
+			}
+
+			.hoursMinutes{
+				width: 80px;
+				height: 44px;
+				border: 2px solid #394079;
+				border-radius: 5px;
+				line-height: 19px;
+				float: right;
+				position: relative;
+				margin-right: 15px;
+				text-align: center;
+				font-family: montserrat-bold,sans-serif;
+				font-size: 16px;
+				padding-top: 7px;
+
+				span{
+					float: left;
+					width: 100%;
+				}
+
+				.text{
+					right:-$main-margin * 2.5;
+					width:20px;
+					left:auto;
+				}
+
+			}
+
+
+			.hours{
+				width:$oferta-extra-hour-size;
+				height:$oferta-extra-number-size;
+				border:2px solid $blue-dark;
+				border-radius:5px;
+				line-height:$oferta-extra-number-size;
+				float:right;
+				position:relative;
+				margin-right:$main-margin * 1.5;
+				text-align:center;
+				font-family:$montserrat-bold;
+				font-size:20px;
+
+				.text{
+					right:-$main-margin * 2.5;
+					width:20px;
+					left:auto;
+				}
+			}
+
+			.days{
+				width:$oferta-extra-day-size;
+				height:$oferta-extra-number-size;
+				background-image:url(../images/icons/icon-almanaque.svg);
+				background-size:auto 100%;
+				background-repeat:no-repeat;
+				background-position:center;
+				line-height:$oferta-extra-day-size;
+				float:right;
+				position:relative;
+				margin-right:$double-margin * 2;
+				text-align:center;
+				font-family:$montserrat-bold;
+				font-size:20px;
+
+				.text{
+					right:-$main-margin * 2.5;
+					width:20px;
+					left:auto;
+				}
+			}
+		}
+
+		@at-root {
+			.bg-gray-light{
+				.ofertas-item-extras{
+					.ofertas-extras{
+						background:$white;
+					}
+				}
+			}
+		}
+
+	}
+
+}

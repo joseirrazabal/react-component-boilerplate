@@ -1,0 +1,97 @@
+.search-tabs{
+	height:58px;
+	
+	.search-tabs-nav{
+		background:darken($yellow, 10%);
+
+		.tabs-wrapper-trigger{
+			cursor:pointer;
+			border-top:4px solid darken($blue-dark, 10%);
+			text-transform:uppercase;
+			color:$gray-tab;
+			line-height: 54px;
+			height: 54px;
+			font-family:$montserrat-bold;
+			font-size:14px;
+			@include transition(200ms ease-in);
+			
+			.icon-tab{
+				display:inline-block;
+				width:30px;
+				height:30px;
+				position: relative;
+				top: $main-margin;
+				margin-right: $main-margin / 2;
+				background-repeat:no-repeat;
+				background-size:100% auto;
+
+				&.icon-plane{
+					background-image:url(../images/icons/icon-plane-gray.svg);
+				}
+
+				&.icon-bell{
+					background-image:url(../images/icons/icon-bell-gray.svg);
+				}
+
+				&.icon-baggage{
+					background-image:url(../images/icons/icon-baggage-gray.svg);
+				}
+
+			}
+
+			&.selected{
+				cursor:auto;
+				border-top:4px solid $blue-dark;
+				color:$white;
+
+				.icon-tab{
+
+					&.icon-plane{
+						background-image:url(../images/icons/icon-plane.svg);
+					}
+
+					&.icon-bell{
+						background-image:url(../images/icons/icon-bell.svg);
+					}
+
+					&.icon-baggage{
+						background-image:url(../images/icons/icon-baggage.svg);
+					}
+
+				}
+			}
+
+			&:hover{
+				background:darken($yellow, 5%);
+
+				&.selected{
+					background:$yellow;
+				}
+			}
+
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+		height:75px;
+
+		.search-tabs-nav{
+			width:100%;
+			
+			.tabs-wrapper-trigger{
+				width:calc(100% / 3);
+				font-size:12px;
+				height: 71px;
+
+				.icon-tab{
+					display:block;
+					margin:auto;
+				}
+
+			}
+		}
+
+	}
+
+}

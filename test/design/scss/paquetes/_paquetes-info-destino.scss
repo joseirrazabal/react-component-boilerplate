@@ -1,0 +1,51 @@
+$icon-check:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ2OS4xODQgNDY5LjE4NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDY5LjE4NCA0NjkuMTg1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQ2Mi41LDk2LjE5M2wtMjEuNzI2LTIxLjcyNmMtOC45NTEtOC45NS0yMy41NjItOC45NS0zMi41OSwwTDE4MC4zNjgsMzAyLjM2MWwtMTE5LjM0LTExOS4zNCAgIGMtOC45NS04Ljk1MS0yMy41NjItOC45NTEtMzIuNTg5LDBMNi43MTIsMjA0Ljc0N2MtOC45NSw4Ljk1MS04Ljk1LDIzLjU2MiwwLDMyLjU4OUwxNjMuOTk3LDM5NC42MiAgIGM0LjUxNCw0LjUxNCwxMC4zMjcsNi44MDksMTYuMjE4LDYuODA5czExLjc4MS0yLjI5NSwxNi4yMTktNi44MDlMNDYyLjI3LDEyOC43ODNDNDcxLjQ1LDExOS42OCw0NzEuNDUsMTA1LjE0NSw0NjIuNSw5Ni4xOTN6IiBmaWxsPSIjOTk5OTk5Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+
+
+.paquete-paragraph, .paquete-paragraph p {
+	font-size:14px;
+	line-height:18px;
+	font-family:$montserrat-light;
+	color:$blue-dark;
+	margin-bottom:$double-margin;
+
+	.paquete-info-list, ul{
+		font-family:$montserrat-light;
+
+		.paquete-info-item, li {
+			padding-left:$double-margin;
+			position:relative;
+			margin-bottom:$main-margin;
+			font-size:14px;
+			line-height:18px;
+			color:$blue-dark;
+
+			&:before{
+				content:'';
+				background-image:$icon-check;
+				background-size:100% auto;
+				background-repeat:no-repeat;
+				width:12px;
+				height:12px;
+				position:absolute;
+				left:0;
+				top:3px;
+			}
+		}
+	}
+}
+
+.slide-destino{
+
+	@include arrowSlide('0', #{$icon-arrow-width} ,'');
+	
+	.item{
+		width:100%;
+		float:left;
+
+		img{
+			width:100%;
+			display:block;
+		}
+	}
+	
+}

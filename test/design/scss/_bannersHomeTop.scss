@@ -1,0 +1,7 @@
+.bannersHomeTop{
+  @media (max-width:$screen-md){
+    img:last-child{
+      margin-bottom: $main-margin * 2;
+    }
+  }
+}

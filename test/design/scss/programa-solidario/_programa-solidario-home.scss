@@ -1,0 +1,116 @@
+$icon-solidario-content:125px;
+$icon-solidario-size:75px;
+
+.programa-solidario-home{
+	width:100%;
+	background:$blue-dark;
+	padding:$double-margin 0;
+	float:left;
+
+	.programa-solidario-cell{
+		position:relative;
+		height:60px;
+
+		.programa-solidario-icon{
+			width:$icon-solidario-content;
+			height:$icon-solidario-content;
+			border-radius:50%;
+			background:$white;
+			border:6px solid $teal;
+			@include vertical-align();
+			position:absolute;
+			left:-$double-margin - $main-margin / 2;
+
+
+			.icon-item{
+				width:$icon-solidario-size;
+				height:$icon-solidario-size;
+				float:none;
+				display:block;
+				margin:auto;
+
+				&:before{
+					width:$icon-solidario-size;
+					height:$icon-solidario-size;
+				}
+			}
+		}
+
+		.programa-solidario-info{
+			text-transform:uppercase;
+			color:$white;
+			font-size:17px;
+			font-family:$montserrat-light;
+			float:left;
+			left:$icon-solidario-content + $main-margin;
+			position:relative;
+			@include vertical-align();
+			width:160px;
+
+			.small{
+				font-size:13px;
+			}
+
+			b{
+				font-size:18px;
+				display:block;
+				font-family:$montserrat-extrabold;
+			}
+		}
+	}
+
+	@media (max-width:$screen-lg){
+
+		$icon-solidario-content:80px;
+		$icon-solidario-size:55px;
+
+		.programa-solidario-cell{
+			height:40px;
+
+			.programa-solidario-icon{
+				width:$icon-solidario-content;
+				height:$icon-solidario-content;
+
+				.icon-item{
+					width:$icon-solidario-size;
+					height:$icon-solidario-size;
+
+					&:before{
+						width:$icon-solidario-size;
+						height:$icon-solidario-size;
+					}
+				}
+			}
+
+			.programa-solidario-info{
+				font-size:13px;
+				left:$icon-solidario-content ;
+
+				b{
+					font-size:14px;
+				}
+			}
+		}
+
+	}
+
+	@media (max-width:$screen-md){
+
+		$icon-solidario-content:80px;
+
+		.programa-solidario-cell{
+			height:90px;
+
+			.programa-solidario-icon{
+				left:-$main-margin;
+
+			}
+
+			.programa-solidario-info{
+				width:calc(100% - #{$icon-solidario-content} - #{$main-margin});
+				left:$icon-solidario-content + $main-margin;
+			}
+		}
+
+	}
+}

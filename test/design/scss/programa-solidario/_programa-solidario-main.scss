@@ -1,0 +1,15 @@
+
+.programa-solidario-paragraph{
+	width:100%; 
+	float:left;
+	margin-bottom:$double-margin;
+	color:$blue-dark;
+	font-family:$montserrat-light;
+	font-family:14px;
+	line-height:20px;
+	text-align:center;
+
+	&.margin-air{
+		margin-bottom:$double-margin * 4!important;
+	}
+}

@@ -1,0 +1,1064 @@
+
+$menu-icon:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDIgMzAyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDIgMzAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPHJlY3QgeT0iMzYiIHdpZHRoPSIzMDIiIGhlaWdodD0iMzAiIGZpbGw9IiNGRkZGRkYiLz4KCTxyZWN0IHk9IjIzNiIgd2lkdGg9IjMwMiIgaGVpZ2h0PSIzMCIgZmlsbD0iI0ZGRkZGRiIvPgoJPHJlY3QgeT0iMTM2IiB3aWR0aD0iMzAyIiBoZWlnaHQ9IjMwIiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+$close-icon:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iRXJyb3IiPgoJCTxnPgoJCQk8cGF0aCBkPSJNNDIwLjUwMSwyMTguNzljLTAuMjg2LTYuOTQyLTIuODY4LTEzLjgyNy04LjE4Ni0xOS4xMjVjLTUuMjk3LTUuMjk4LTEyLjE4My03Ljg5OC0xOS4xMjUtOC4xODYgICAgIGMtNy43MjYtMC4zMjUtMTUuNTQ4LDIuMjc2LTIxLjQzOCw4LjE4NkwzMDYsMjY1LjQzNmwtNjUuNzUyLTY1Ljc3MWMtNS45MDktNS45MS0xMy43MTItOC40OTItMjEuNDM5LTguMTg2ICAgICBjLTYuOTQyLDAuMjg3LTEzLjgyNywyLjg2OS0xOS4xMjUsOC4xODZjLTUuMjk3LDUuMjk4LTcuODk4LDEyLjE4My04LjE4NiwxOS4xMjVjLTAuMzI1LDcuNzI3LDIuMjc2LDE1LjUyOSw4LjE4NiwyMS40MzkgICAgIEwyNjUuNDM2LDMwNmwtNjUuNzUyLDY1Ljc1MmMtNS45MSw1LjkwOS04LjQ5MiwxMy43MTMtOC4xODYsMjEuNDM4YzAuMjg3LDYuOTQyLDIuODY5LDEzLjgyOCw4LjE4NiwxOS4xMjUgICAgIGM1LjI5OCw1LjI5OCwxMi4xODMsNy44OTksMTkuMTI1LDguMTg2YzcuNzI3LDAuMzI1LDE1LjUzLTIuMjc1LDIxLjQzOS04LjE4NkwzMDYsMzQ2LjU2NGw2NS43NzEsNjUuNzcxICAgICBjNS45MSw1LjkwOSwxMy43MTMsOC40OTEsMjEuNDM5LDguMTg2YzYuOTQyLTAuMjg3LDEzLjgyNy0yLjg2OSwxOS4xMjUtOC4xODZjNS4yOTgtNS4yOTgsNy44OTgtMTIuMTgzLDguMTg2LTE5LjEyNSAgICAgYzAuMzI1LTcuNzI3LTIuMjc2LTE1LjUyOS04LjE4Ni0yMS40MzlMMzQ2LjU2NCwzMDZsNjUuNzUxLTY1Ljc1MkM0MTguMjI2LDIzNC4zMzksNDIwLjgyNiwyMjYuNTM2LDQyMC41MDEsMjE4Ljc5eiBNMzA2LDAgICAgIEMxMzcuMDEyLDAsMCwxMzcuMDEyLDAsMzA2czEzNy4wMTIsMzA2LDMwNiwzMDZzMzA2LTEzNy4wMTIsMzA2LTMwNlM0NzQuOTg4LDAsMzA2LDB6IE0zMDYsNTU0LjYyNSAgICAgQzE2OC45MTIsNTU0LjYyNSw1Ny4zNzUsNDQzLjA4OCw1Ny4zNzUsMzA2UzE2OC45MTIsNTcuMzc1LDMwNiw1Ny4zNzVTNTU0LjYyNSwxNjguOTEyLDU1NC42MjUsMzA2UzQ0My4wODgsNTU0LjYyNSwzMDYsNTU0LjYyNSAgICAgeiIgZmlsbD0iI0Q4MDAyNyIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+$icon-play:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDg3Ljg1OSA4Ny44NTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDg3Ljg1OSA4Ny44NTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iUGxheV8xXyI+CgkJPGc+CgkJCTxwYXRoIGQ9Ik00My45MywwQzE5LjcwNSwwLDAsMTkuNzA2LDAsNDMuOTNjMCwyNC4yMjUsMTkuNzA1LDQzLjkyOSw0My45Myw0My45MjljMjQuMjI0LDAsNDMuOTI5LTE5LjcwNCw0My45MjktNDMuOTI5ICAgICBDODcuODU5LDE5LjcwNiw2OC4xNTQsMCw0My45MywweiBNNDMuOTMsNzkuODczYy0xOS44MiwwLTM1Ljk0My0xNi4xMjMtMzUuOTQzLTM1Ljk0M2MwLTE5LjgxMiwxNi4xMjMtMzUuOTQyLDM1Ljk0My0zNS45NDIgICAgIGMxOS44MTksMCwzNS45NDMsMTYuMTMsMzUuOTQzLDM1Ljk0MkM3OS44NzMsNjMuNzUsNjMuNzQ5LDc5Ljg3Myw0My45Myw3OS44NzN6IE0zNy45MzgsNTUuOTEzTDU1LjkwOSw0My45M0wzNy45MzgsMzEuOTQ2ICAgICBWNTUuOTEzeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+$chevron-down:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NTUgNDU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTUgNDU1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxwYXRoIGQ9Ik0wLDB2NDU1aDQ1NVYwSDB6IE0yMjcuNSwzMDcuMjM3TDk5LjQxMSwxNzkuNTY1bDIxLjE3OC0yMS4yNDhMMjI3LjUsMjY0Ljg4bDEwNi45MTEtMTA2LjU2M2wyMS4xNzgsMjEuMjQ4TDIyNy41LDMwNy4yMzd6ICAiIGZpbGw9IiMzOTQwNzkiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+$chevron-up:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NTUgNDU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTUgNDU1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxwYXRoIGQ9Ik0wLDB2NDU1aDQ1NVYwSDB6IE0zMzQuNDExLDI5Ni42ODNMMjI3LjUsMTkwLjEyTDEyMC41ODksMjk2LjY4M2wtMjEuMTc5LTIxLjI0OEwyMjcuNSwxNDcuNzYzbDEyOC4wODksMTI3LjY3MiAgTDMzNC40MTEsMjk2LjY4M3oiIGZpbGw9IiMzOTQwNzkiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+
+
+$icon-size-nav:25px;
+
+
+.icon-item{
+	width:$icon-size-nav;
+	height:$icon-size-nav;
+	display:inline-block;
+
+	&:before{
+		width:$icon-size-nav;
+		height:$icon-size-nav;
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		float:left;
+		position:absolute;
+		@include vertical-align();
+	}
+
+}
+
+.icon-phone{
+
+	&:before{
+		background-image:url(../images/icons/icon-phone.svg);
+		content:'';
+	}
+
+	@at-root {
+		.light-bg{
+			.main-nav-item{
+				.icon-phone{
+
+					&:before{
+						background-image:url(../images/icons/icon-phone-blue.svg);
+						content:'';
+					}
+
+				}
+			}
+		}
+	}
+
+	@media (max-width:$screen-lg){
+		&:before{
+			background-image:url(../images/icons/icon-phone-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+.icon-message{
+
+	&:before{
+		background-image:url(../images/icons/icon-message.svg);
+		content:'';
+	}
+
+	@at-root {
+		.light-bg{
+			.main-nav-item{
+				.icon-message{
+
+					&:before{
+						background-image:url(../images/icons/icon-message-blue.svg);
+						content:'';
+					}
+
+				}
+			}
+		}
+	}
+
+	@media (max-width:$screen-lg){
+		&:before{
+			background-image:url(../images/icons/icon-message-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+.icon-config{
+
+	&:before{
+		background-image:url(../images/icons/icon-config.svg);
+		content:'';
+	}
+
+	@at-root {
+		.light-bg{
+			.main-nav-item{
+				.icon-config{
+
+					&:before{
+						background-image:url(../images/icons/icon-config-blue.svg);
+						content:'';
+					}
+
+				}
+			}
+		}
+	}
+
+	@media (max-width:$screen-lg){
+		&:before{
+			background-image:url(../images/icons/icon-config-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+.icon-menu{
+
+	&:before{
+		background-image:url(../images/icons/icon-menu.svg);
+		content:'';
+	}
+
+	@at-root {
+		.light-bg{
+			.icon-menu{
+
+				&:before{
+					background-image:url(../images/icons/icon-menu-blue.svg);
+					content:'';
+				}
+
+			}
+		}
+	}
+
+}
+
+.icon-close{
+
+	&:before{
+		background-image:url(../images/icons/icon-close.svg);
+		content:'';
+	}
+
+}
+
+.icon-bus{
+
+	&:before{
+		background-image:url(../images/icons/icon-bus.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-bus{
+
+				&:before{
+					background-image:url(../images/icons/icon-bus-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+}
+
+.icon-assist{
+
+	&:before{
+		background-image:url(../images/icons/icon-assist.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-assist{
+
+				&:before{
+					background-image:url(../images/icons/icon-assist-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-ticket{
+
+	&:before{
+		background-image:url(../images/icons/icon-ticket.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-tikect{
+
+				&:before{
+					background-image:url(../images/icons/icon-ticket-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-car{
+
+	&:before{
+		background-image:url(../images/icons/icon-car.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-car{
+
+				&:before{
+					background-image:url(../images/icons/icon-car-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-band{
+
+	&:before{
+		background-image:url(../images/icons/icon-band.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-band{
+
+				&:before{
+					background-image:url(../images/icons/icon-band-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-guia{
+
+	&:before{
+		background-image:url(../images/icons/icon-guia.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-guia{
+
+				&:before{
+					background-image:url(../images/icons/icon-guia-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-plane{
+
+	&:before{
+		background-image:url(../images/icons/icon-plane.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-plane{
+
+				&:before{
+					background-image:url(../images/icons/icon-plane-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+	&.icon-blue{
+
+		&:before{
+			background-image:url(../images/icons/icon-plane-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+.icon-baggage{
+
+	&:before{
+		background-image:url(../images/icons/icon-baggage.svg);
+		content:'';
+	}
+	@at-root {
+		.icons-blue{
+
+			.icon-baggage{
+
+				&:before{
+					background-image:url(../images/icons/icon-baggage-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+	&.icon-blue{
+
+		&:before{
+			background-image:url(../images/icons/icon-baggage-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+.icon-bell{
+
+	&:before{
+		background-image:url(../images/icons/icon-bell.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-bell{
+
+				&:before{
+					background-image:url(../images/icons/icon-bell-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+	&.icon-blue{
+
+		&:before{
+			background-image:url(../images/icons/icon-bell-blue.svg);
+			content:'';
+		}
+	}
+
+}
+
+
+.icon-tree{
+
+	&:before{
+		background-image:url(../images/icons/icon-tree.svg);
+		content:'';
+	}
+
+}
+
+.icon-pencil{
+
+	&:before{
+		background-image:url(../images/icons/icon-pencil.svg);
+		content:'';
+	}
+
+}
+
+.icon-ambulance{
+
+	&:before{
+		background-image:url(../images/icons/icon-ambulance.svg);
+		content:'';
+	}
+
+}
+
+.icon-amigos{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-amigos.svg);
+		content:'';
+	}
+
+}
+
+.icon-aventura{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-aventura.svg);
+		content:'';
+	}
+
+}
+
+.icon-ciudad{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-ciudad.svg);
+		content:'';
+	}
+
+}
+
+.icon-familia{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-familia.svg);
+		content:'';
+	}
+
+}
+
+.icon-pareja{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-pareja.svg);
+		content:'';
+	}
+
+}
+
+.icon-relax{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-relax.svg);
+		content:'';
+	}
+
+}
+
+.icon-finde{
+
+	&:before{
+		background-image:url(../images/tematicas/icon-relax.svg);
+		content:'';
+	}
+
+}
+
+.icon-location{
+
+	&:before{
+		background-image:url(../images/icons/icon-location-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-almanaque{
+	
+	&:before{
+		background-image:url(../images/icons/icon-almanaque-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-people-adult{
+	
+	&:before{
+		background-image:url(../images/icons/icon-people-adult.svg);
+		content:'';
+	}
+
+}
+
+.icon-price{
+	
+	&:before{
+		background-image:url(../images/icons/icon-price-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-duration{
+	
+	&:before{
+		background-image:url(../images/icons/icon-duration-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-regimen{
+	
+	&:before{
+		background-image:url(../images/icons/icon-regimen-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-bedroom{
+	
+	&:before{
+		background-image:url(../images/icons/icon-bedroom-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-chevron-down{
+	position:relative;
+
+	&:before{
+		background-image:$chevron-down;
+		content:'';
+	}
+
+}
+
+.icon-notfound{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-notfound.svg);
+		content:'';
+	}
+
+}
+
+.icon-maintenance{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-maintenance.svg);
+		content:'';
+	}
+
+}
+
+.icon-wire-transfer-blue{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-wire-transfer-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-credit-card-blue{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-credit-card-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-credit-card-blue2{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-credit-card-blue2.svg);
+		content:'';
+	}
+
+}
+
+.icon-mercadopago{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-mercadopago.svg);
+		content:'';
+	}
+}
+
+.icon-todopago{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-todopago.svg);
+		content:'';
+	}
+}
+
+.icon-checkout-error{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-checkout-error.svg);
+		content:'';
+	}
+
+}
+
+.icon-checkout-process{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-checkout-process.svg);
+		content:'';
+	}
+
+}
+
+.icon-checkout-success{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-checkout-success.svg);
+		content:'';
+	}
+
+}
+
+.icon-star{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-star.svg);
+		content:'';
+	}
+
+}
+
+.icon-cocina{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-cocina.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-cocina-blue,
+			.icon-cocina{
+
+				&:before{
+					background-image:url(../images/icons/icon-cocina-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-estacionamiento{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-estacionamiento.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-estacionamiento-blue,
+			.icon-estacionamiento{
+
+				&:before{
+					background-image:url(../images/icons/icon-estacionamiento-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-wifi{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-wifi.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-wifi-blue,
+			.icon-wifi{
+
+				&:before{
+					background-image:url(../images/icons/icon-wifi-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-piscina{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-piscina.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-piscina-blue,
+			.icon-piscina{
+
+				&:before{
+					background-image:url(../images/icons/icon-piscina-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-aire-acondicionado{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-aire-acondicionado.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+			
+			.icon-aire-acondicionado-blue,
+			.icon-aire-acondicionado{
+
+				&:before{
+					background-image:url(../images/icons/icon-aire-acondicionado-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-map-blue{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-map-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-list-blue{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-list-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-service{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-service.svg);
+		content:'';
+	}
+
+}
+
+.icon-plus{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-plus.svg);
+		content:'';
+	}
+
+}
+
+.icon-scale{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-scale-blue.svg);
+		content:'';
+	}
+
+}
+
+
+.icon-duration{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-duration.svg);
+		content:'';
+	}
+
+}
+
+.icon-airlines{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-airlines-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-airport{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-airport-blue.svg);
+		content:'';
+	}
+
+}
+
+.icon-chevron-up{
+	position:relative;
+
+	&:before{
+		background-image:$chevron-up;
+		content:'';
+	}
+
+}
+
+.icon-datos{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-datos-gray.svg);
+		content:'';
+	}
+
+	@at-root{
+		
+		.active{
+			.icon-datos{
+				&:before{
+					background-image:url(../images/icons/icon-datos-blue.svg);
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+.icon-pago{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-pago-gray.svg);
+		content:'';
+	}
+
+	@at-root{
+		
+		.active{
+			.icon-pago{
+				&:before{
+					background-image:url(../images/icons/icon-pago-blue.svg);
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+.icon-world{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-world-gray.svg);
+		content:'';
+	}
+
+	@at-root{
+		
+		.active{
+			.icon-world{
+				&:before{
+					background-image:url(../images/icons/icon-world-blue.svg);
+				}
+			}
+
+		}
+
+	}
+
+}
+
+
+
+.icon-media-pension{
+	position:relative;
+	
+	&:before{
+		background-image:url(../images/icons/icon-media-pension.svg);
+		content:'';
+	}
+
+	@at-root {
+		.icons-blue{
+
+			.icon-media-pension{
+
+				&:before{
+					background-image:url(../images/icons/icon-media-pension-blue.svg);
+					content:'';
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.icon-hotel-rate{
+	width:100px;
+	height:18px;
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	display:block;
+
+	&.star-1{
+		background-image:url(../images/icons/icon-1-star.svg);
+	}
+
+	&.star-2{
+		background-image:url(../images/icons/icon-2-star.svg);
+	}
+
+	&.star-3{
+		background-image:url(../images/icons/icon-3-star.svg);
+	}
+
+	&.star-4{
+		background-image:url(../images/icons/icon-4-star.svg);
+	}
+
+	&.star-5{
+		background-image:url(../images/icons/icon-5-star.svg);
+	}
+
+	&.star-white{
+		&.star-1{
+			background-image:url(../images/icons/icon-1-star-white.svg);
+		}
+
+		&.star-2{
+			background-image:url(../images/icons/icon-2-star-white.svg);
+		}
+
+		&.star-3{
+			background-image:url(../images/icons/icon-3-star-white.svg);
+		}
+
+		&.star-4{
+			background-image:url(../images/icons/icon-4-star-white.svg);
+		}
+
+		&.star-5{
+			background-image:url(../images/icons/icon-5-star-white.svg);
+		}
+	}
+
+}
+
+.icon-tarifas{
+	width:50px;
+
+	&:before{
+		width:50px;
+		height:50px;
+		background-image:url(../images/icons/icon-tarifas.svg);
+		content:'';
+	}
+
+}
+
+
+
+.icon-flight{
+	position:relative;
+
+	&:before{
+		background-image:url(../images/icons/icon-flight-white-right.svg);
+		content:'';
+	}
+
+	@at-root{
+		.flight-return{
+			.icon-flight{
+				&:before{
+					background-image:url(../images/icons/icon-flight-white-left.svg);
+				}
+			}
+		}
+	}	
+
+}
+

@@ -1,0 +1,38 @@
+
+.paquetes-tarifas{
+	
+	.result-container{
+		margin-bottom: 0;
+
+		.result-options{
+			border-top:none;
+
+			.result-options-trigger{
+				color:$blue-dark;
+				margin:$double-margin 0;
+				text-align:center;
+				float:left;
+
+				.icon-item{
+					float:none;
+					display:inline-block;
+					position:relative;
+					top:4px;
+				}
+
+			}
+
+			.result-option-item{
+				width:calc(100% - 2px);
+				border:1px solid $blue-dark;
+				border-top:none;
+				background:$white;
+
+				&:first-child{
+					border-top:1px solid $blue-dark;
+				}
+			}
+		}
+	}
+	
+}

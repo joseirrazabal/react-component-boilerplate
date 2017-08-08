@@ -1,0 +1,146 @@
+$icon-paquete-description-size:38px;
+
+
+.paquete-detail-view{
+	width:calc(100% - #{$double-margin} * 2);
+	float:left;
+	position:relative;
+	background-color:$white-alpha;
+	padding:$double-margin;
+	z-index:2;	
+
+	.paquete-detail-price{
+		width:calc(100% - #{$double-margin});
+		padding:$double-margin $main-margin;
+		background-color:$yellow;
+		text-align:center;
+		font-size:24px;
+		text-transform:uppercase;
+		font-family:$montserrat-light;
+		color:$white;
+		margin-bottom:$double-margin;
+
+		b{
+			font-family:$montserrat-extrabold;
+		}
+
+		.paquete-detail-price-remark{
+			display:block;
+			font-family:$montserrat-light;
+			font-size:15px;
+			text-transform:none;
+		}
+
+	}
+
+	.btn{
+		float:left;
+		max-width:100%;
+		margin-bottom:$double-margin;
+		padding:$double-margin 0;
+
+		&.comprar{
+			background-color:$red;
+
+			&:hover{
+				background-color:darken($red, 10%);
+			}
+
+		}
+
+		&.consultar{
+			background:none;
+			max-width:calc(100% - 2px);
+			width:calc(100% - 2px);
+			border:1px solid $blue-dark!important;
+			border-bottom:1px solid $blue-dark!important;
+			color:$blue-dark;
+
+			&:hover{
+				background-color:lighten($blue-dark, 10%);
+				color:$white;
+			}
+		}
+
+		&:last-child{
+			margin-bottom:0;
+		}
+
+	}
+
+	@media(max-width:$screen-lg){
+		width:calc(106% - #{$double-margin} * 2);
+		margin-left:-3%;
+		margin-right:-3%;
+		background:$white;
+	}
+
+}
+
+.paquete-detail-description{
+	width:100%;
+	float:left;
+	margin-bottom:$main-margin;
+
+	.paquete-detail-description-item{
+		margin-bottom:$main-margin;
+		width:100%;
+		float:left;
+
+		.icon-item{
+			position:relative;
+			width:$icon-paquete-description-size;
+			height:$icon-paquete-description-size;
+
+			&:before{
+				width:$icon-paquete-description-size;
+				height:$icon-paquete-description-size;
+			}
+
+		}
+
+		.wrapper-icon{
+			width:$icon-paquete-description-size;
+			height:$icon-paquete-description-size;
+			float:left;
+			margin-right:$main-margin;
+		}
+
+		.wrapper-text{
+			width:calc(100% - #{$icon-paquete-description-size} - #{$main-margin});
+			height:$icon-paquete-description-size;
+			float:left;
+			position:relative;
+
+			.description-text{
+				width:100%;
+				height:auto;
+				position:absolute;
+				@include vertical-align();
+				font-size: 12px;
+				color:$blue-dark;
+				line-height: 1.3em;
+				b{
+					font-family:$montserrat-extrabold;
+					text-transform:uppercase;
+				}
+			}
+
+			.link-detail{
+				font-size:10px;
+				position:absolute;
+				bottom:- $main-margin * 1.5;
+				color:$blue-dark;
+				text-decoration:underline;
+				cursor: pointer;
+
+				&:hover{
+					text-decoration:none;
+				}
+			}
+
+		}
+
+	}
+
+}

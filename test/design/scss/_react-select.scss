@@ -1,0 +1,73 @@
+.Select-control, .Select-menu-outer {
+  /*height:38px;*/
+  //color:#888888;
+  font-size:14px;
+  font-family:$montserrat-regular;
+  padding: 1px;
+  text-indent:0;
+  border-radius: 0px;
+  font-weight: normal;
+  border: none;
+  //.Select-option, .Select-option.is-selected {
+    //background: #FFF;
+  //}
+  .city{
+    // color: black;
+    font-weight: 400
+  }
+  .country{
+    // color: black;
+    font-weight: 600
+  }
+}
+.Select-menu-outer {
+  z-index: 40;
+}
+
+#input-from, #input-to, .Select-placeholder{
+  line-height: 38px;
+  //color:$gray;
+  //font-style: italic;
+  font-size:13px;
+  height:40px;
+  span{
+    font-size: 13px;
+    font-weight: 100;
+    //color: black;
+  }
+}
+.PassengersInput{
+  //color: #888;
+  font-size: 13px;
+  //font-style: italic;
+  font-family:$montserrat-regular;
+  font-weight: bold;
+}
+//.datepicker-here{
+//  height: 35px!important;
+//}
+.Select-menu {
+  //color:#888888;
+  font-size:14px;
+  font-family:$montserrat-regular;
+}
+
+.has-value.Select--single > .Select-control {
+  .Select-value {
+    .Select-value-label {
+      //color: #aaa;
+      line-height: 38px;
+      font-size: 13px;
+      //font-style: italic;
+    }
+  }
+}
+
+.has-value.is-pseudo-focused.Select--single > .Select-control {
+  .Select-value {
+    .Select-value-label {
+      //color:#888888;
+      line-height: 38px;
+    }
+  }
+}

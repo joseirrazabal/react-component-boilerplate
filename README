@@ -2,4 +2,13 @@ Agregar nuestros componentes en src/component/
 
 Modificar src/index.js (importar componentes)
 
-Modificar test/App.jsx para ver la demo
+Modificar test/App.jsx para generar demo
+
+Ejecutar test
+npm run test
+
+Publicar componente
+npm publish
+
+Aumentar version y publicar
+npm version patch

@@ -99,13 +99,7 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("css/index.css"),
-    // new ExtractTextPlugin("[name].[contenthash].css"),
     new webpack.DefinePlugin({'process.env': {NODE_ENV: '"production"'}}),
-    new webpack.optimize.AggressiveSplittingPlugin({
-      minSize: 30000,
-      maxSize: 50000
-    }),
-    // new webpack.optimize.CommonsChunkPlugin({names: ['index'], filename: 'index.js'}),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         pure_getters: true,
@@ -123,7 +117,6 @@ module.exports = {
     }),
   ],
 
-  // Include mocks for when node.js specific modules may be required
   node: {
     fs: 'empty',
     vm: 'empty',

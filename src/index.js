@@ -1,3 +1,3 @@
-import Breadcrumb from './components/Breadcrumb/Breadcrumb.jsx'
+import Prueba from './components/Prueba/Prueba.jsx'
 
-export default Breadcrumb 
+export default Prueba

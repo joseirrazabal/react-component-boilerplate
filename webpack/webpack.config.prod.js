@@ -17,13 +17,15 @@ fs.readdirSync('node_modules')
 module.exports = {
   context: rootFolder,
 
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
 
   output: {
     path: path.join(rootFolder, 'lib'),
-    filename: 'index.js',
-    libraryTarget: 'umd',
-    library: 'Breadcrumb'
+    filename: '[name].js',
+    library: ["[name]"],
+    libraryTarget: 'umd'
   },
 
   externals: nodeModules,

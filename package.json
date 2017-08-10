@@ -1,9 +1,9 @@
 {
   "name": "aln-prueba",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "lib/index.js",
   "files": [
-    "/lib/css/index.css"
+    "lib"
   ],
   "scripts": {
     "postversion": "npm publish",

@@ -1,7 +1,10 @@
 {
-  "name": "aln-bread",
-  "version": "0.0.13",
+  "name": "aln-prueba",
+  "version": "0.1.1",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "postversion": "npm publish",
     "prepublish": "npm run build",

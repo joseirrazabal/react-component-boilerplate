@@ -1,14 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import TestUtils from 'react-dom/test-utils'
 
 import App from '../App.jsx'
+
+const finalCreateStore = compose(
+  applyMiddleware(thunk)
+)(createStore)
+
+const store = finalCreateStore(function () { })
 
 describe("render", () => {
   it("render sin error", () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
-    ReactDOM.render(<App />, div)
+    ReactDOM.render(
+      <Provider store={store} key="provider">
+        <App />
+      </Provider>,
+      div
+    )
   })
 })
 

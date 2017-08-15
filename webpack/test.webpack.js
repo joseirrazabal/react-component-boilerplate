@@ -6,12 +6,6 @@ const rootFolder = path.resolve(__dirname, '..')
 module.exports = {
 	context: rootFolder,
 
-	output: {
-		path: path.join(rootFolder, '/dist'),
-		filename: 'scripts/[name].[chunkhash].js',
-		chunkFilename: 'scripts/[name].[chunkhash].chunk.js',
-	},
-
 	resolveLoader: {
 		modules: [path.join(rootFolder, 'node_modules')],
 		moduleExtensions: ['-loader'],

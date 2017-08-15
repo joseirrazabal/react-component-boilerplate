@@ -50,7 +50,14 @@ module.exports = {
 							modules: true
 						}
 					},
-					'sass-loader'
+					'resolve-url-loader',
+					'sass-loader?sourceMap',
+					{
+						loader: 'sass-resources-loader',
+						options: {
+							resources: [ path.resolve(rootFolder, 'node_modules/aln-globalStyle/lib/scss/main.scss') ]
+						},
+					},
 				]
 			},
 			{
@@ -81,7 +88,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new webpack.DefinePlugin({'process.env': {NODE_ENV: '"development"'}}),
+		new webpack.DefinePlugin({'process.env': { NODE_ENV: '"development"' }}),
 		new webpack.NamedModulesPlugin(),
 	],
 

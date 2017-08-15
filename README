@@ -8,7 +8,7 @@ Ejecutar test
 npm run test
 
 Publicar componente
-npm publish
+npm build
 
 Aumentar version y publicar
 npm version patch

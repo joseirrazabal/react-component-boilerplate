@@ -13,7 +13,7 @@
     "copy": "cpx ./src/css/** ./lib/css/",
     "copypackage": "cpx package.json lib",
     "test": "karma start",
-    "eslint": "eslint src/index.js"
+    "lint": "eslint --ext .js --ext .jsx src"
   },
   "dependencies": {
     "aln-globalStyle": "^0.0.1",

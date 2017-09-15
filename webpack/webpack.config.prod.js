@@ -102,17 +102,17 @@ module.exports = {
   plugins: [
     // new ExtractTextPlugin("css/index.css"),
     new webpack.DefinePlugin({'process.env': {NODE_ENV: '"production"'}}),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        pure_getters: true,
-        unsafe: true,
-        unsafe_comps: true,
-        warnings: false
-      },
-      output: {
-        comments: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compressor: {
+    //     pure_getters: true,
+    //     unsafe: true,
+    //     unsafe_comps: true,
+    //     warnings: false
+    //   },
+    //   output: {
+    //     comments: false
+    //   }
+    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false
